@@ -1,0 +1,54 @@
+/* SpearLink Cyber Custom Styles */
+
+:root {
+  --spearlink-primary: #1e3a8a;
+  --spearlink-secondary: #3b82f6;
+  --spearlink-accent: #0ea5e9;
+  --spearlink-dark: #1f2937;
+  --spearlink-light: #f8fafc;
+}
+
+/* Override Chirpy colors with SpearLink blues */
+:root {
+  --link-color: var(--spearlink-primary);
+  --text-color: var(--spearlink-dark);
+  --heading-color: var(--spearlink-primary);
+}
+
+/* Sidebar branding */
+#sidebar .site-title {
+  color: var(--spearlink-primary) !important;
+}
+
+/* Navigation links */
+.nav-link:hover {
+  background-color: var(--spearlink-light) !important;
+  color: var(--spearlink-primary) !important;
+}
+
+.nav-link.active {
+  background-color: var(--spearlink-primary) !important;
+}
+
+/* Buttons and CTAs */
+.btn-primary {
+  background-color: var(--spearlink-primary);
+  border-color: var(--spearlink-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--spearlink-secondary);
+  border-color: var(--spearlink-secondary);
+}
+
+/* Post tags */
+.post-tag {
+  background-color: var(--spearlink-light);
+  color: var(--spearlink-primary);
+  border: 1px solid var(--spearlink-primary);
+}
+
+.post-tag:hover {
+  background-color: var(--spearlink-primary);
+  color: white;
+}

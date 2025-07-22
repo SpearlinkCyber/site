@@ -3,77 +3,100 @@ layout: page
 title: Home
 ---
 
+<div class="homepage-hero">
+  <img src="/assets/img/logos/spearlink-horizontal-small.png" alt="Spearlink Cyber" class="homepage-logo">
+</div>
+
 # Professional Cybersecurity Consulting
 
 **Protecting Australian organisations through expert security assessments and strategic guidance.**
 
-SpearLink Cyber specialises in penetration testing, security consulting, and cloud configuration reviews. We help organisations identify vulnerabilities, strengthen defenses, and build resilient security programs.
+Leveraging years of penetration testing and security consulting experience with major Australian enterprises including financial services, healthcare, energy, and technology sectors. Available for Northern Territory consultation with focus on practical security outcomes.
 
 ---
 
-## Core Services
+## Core Capabilities
 
 <div class="services-grid">
   <div class="service-card">
     <div class="service-icon">🎯</div>
     <h3>Penetration Testing</h3>
-    <p>Comprehensive security assessments to identify vulnerabilities before attackers do.</p>
+    <p>Find vulnerabilities before attackers do. Web applications, APIs, and infrastructure testing with clear remediation guidance.</p>
   </div>
   
   <div class="service-card">
     <div class="service-icon">☁️</div>
-    <h3>Cloud Security Reviews</h3>
-    <p>Expert configuration reviews for AWS, Azure, and cloud infrastructure security.</p>
+    <h3>Cloud Security Review</h3>
+    <p>AWS, Azure, and GCP configuration assessment to identify misconfigurations and strengthen cloud security posture.</p>
   </div>
   
   <div class="service-card">
     <div class="service-icon">🔍</div>
     <h3>Security Consulting</h3>
-    <p>Strategic cybersecurity guidance tailored to your organisation's unique needs.</p>
-  </div>
-  
-  <div class="service-card">
-    <div class="service-icon">📋</div>
-    <h3>Compliance & Governance</h3>
-    <p>ACSC ISM, ISO 27001, and Essential Eight implementation and assessment.</p>
+    <p>Strategic security guidance including compliance readiness, risk assessment, and security program development.</p>
   </div>
 </div>
 
 ---
 
-## Why Choose SpearLink Cyber?
+## Northern Territory Focus
+
+**Building cybersecurity capability across the Territory**
+
+Drawing on experience across government, local MSPs, and enterprise clients to deliver practical security guidance tailored to Territory organisations. Through SecTalks Darwin involvement and engagement with local technology partners, committed to strengthening regional cybersecurity expertise.
+
+<div class="nt-focus">
+  <div class="nt-capability">
+    <strong>🏢 Small Business to Enterprise</strong>
+    <p>Pragmatic security solutions scaled to organisational size and maturity, from startup guidance to enterprise architecture.</p>
+  </div>
+  
+  <div class="nt-capability">
+    <strong>🏛️ Government & Compliance</strong>
+    <p>Government sector experience with deep understanding of ACSC requirements and Australian regulatory landscape.</p>
+  </div>
+  
+  <div class="nt-capability">
+    <strong>🌏 Remote & Regional Capability</strong>
+    <p>Territory-wide engagement capability with understanding of remote infrastructure challenges and solutions.</p>
+  </div>
+</div>
+
+---
+
+## Why Choose This Approach?
 
 <div class="value-props">
   <div class="value-prop">
-    <strong>🇦🇺 Australian Expertise</strong>
-    <p>Local cybersecurity knowledge with deep understanding of Australian regulatory landscape.</p>
+    <strong>🇦🇺 Territory-Focused Expertise</strong>
+    <p>NT-registered consultant with genuine commitment to Northern Territory cybersecurity and capability development.</p>
   </div>
   
   <div class="value-prop">
-    <strong>🏛️ Government Ready</strong>
-    <p>ACSC-aligned methodologies, security clearance eligible, vendor panel ready.</p>
+    <strong>🏦 Enterprise Experience</strong>
+    <p>Verified security researcher with experience across major Australian enterprises including financial services, healthcare, and energy sectors.</p>
   </div>
   
   <div class="value-prop">
-    <strong>🎖️ Proven Track Record</strong>
-    <p>Extensive experience with Tier-1 clients across financial services, government, and critical infrastructure.</p>
+    <strong>🎯 Practical Security Outcomes</strong>
+    <p>Focus on finding real vulnerabilities and providing clear remediation guidance that organisations can actually implement.</p>
   </div>
   
   <div class="value-prop">
-    <strong>🔗 Comprehensive Approach</strong>
-    <p>Connecting offensive security, defensive measures, and business objectives for holistic protection.</p>
+    <strong>📚 Knowledge Sharing Commitment</strong>
+    <p>SecTalks Darwin co-organiser committed to building local expertise through community development and skills transfer.</p>
   </div>
 </div>
 
 ---
 
-## Ready to Secure Your Organisation?
+## Ready to Strengthen Your Security Posture?
 
-Whether you need a penetration test, security consultation, or compliance assessment, we're here to help.
+Available for Territory-wide consultation on security assessment, infrastructure design, and compliance advisory.
 
 <div class="cta-section">
   <a href="/contact/" class="cta-button">Get in Touch</a>
-  <a href="/services/" class="cta-button secondary">View Services</a>
+  <a href="/services/" class="cta-button secondary">View Capabilities</a>
 </div>
 
 <style>
@@ -106,6 +129,32 @@ Whether you need a penetration test, security consultation, or compliance assess
 .service-card h3 {
   color: #1e3a8a;
   margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.nt-focus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+  border-radius: 12px;
+  border: 2px solid #dbeafe;
+}
+
+.nt-capability {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  border-left: 4px solid #1e3a8a;
+}
+
+.nt-capability strong {
+  color: #1e3a8a;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 .value-props {
@@ -166,6 +215,11 @@ Whether you need a penetration test, security consultation, or compliance assess
 @media (max-width: 768px) {
   .services-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .nt-focus {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
   
   .value-props {

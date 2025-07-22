@@ -1,85 +1,47 @@
-# SpearLink Cyber - Professional Cybersecurity Consulting
-
-# Import the theme
 theme: jekyll-theme-chirpy
-
-# The language of the webpage
 lang: en
-
-# Change to your timezone
 timezone: Australia/Darwin
 
-# jekyll-seo-tag settings
-title: SpearLink Cyber
-tagline: Professional Cybersecurity Consulting Services
-description: >-
-  Expert penetration testing, security consulting, and cloud configuration reviews. 
-  Protecting Australian organisations through comprehensive cybersecurity solutions.
+title: Spearlink Cyber
+tagline: Strengthening Cybersecurity through Excellence in Practice
+description: >
+  Professional cybersecurity consultant specialising in penetration testing, cloud security review, 
+  and security consulting services. Supporting Australian organisations with practical 
+  security assessment and strategic guidance, with particular focus on Northern Territory clients.
 
-# Fill in the protocol & hostname for your site
 url: "https://spearlinkcyber.com.au"
 
-github:
-  username: spearlinkcyberAU
-
-social:
-  name: SpearLink Cyber
-  email: contact@spearlinkcyber.com.au
-  links:
-    - https://github.com/spearlinkcyberAU
-    - https://linkedin.com/company/spearlink-cyber
-
-# Site Verification Settings (add later as needed)
 webmaster_verifications:
   google:
   bing:
 
-# Web Analytics Settings (add Google Analytics later)
 analytics:
   google:
     id:
 
-# Page views settings
 pageviews:
   provider:
 
-# Color scheme - professional blue theme
-theme_mode: # empty means auto (user can toggle)
-
-# CDN endpoint for media resources
+theme_mode: light
 cdn:
+avatar: /assets/img/logos/spearlink-main.png
+social_preview_image: /assets/img/logos/spearlink-horizontal.png
+toc: false
 
-# Avatar/logo on sidebar
-avatar: /assets/img/logos/spearlink-icon.png
-
-# Social preview image for SEO
-social_preview_image: /assets/img/logos/spearlink-social-card.png
-
-# Table of contents in posts
-toc: true
-
-# Comments system (disable for professional site)
 comments:
   provider:
 
-# Self-hosted static assets - ENABLED
 assets:
   self_host:
     enabled: true
 
-# Progressive Web App
 pwa:
   enabled: true
   cache:
     enabled: true
 
-# Pagination
-paginate: 10
-
-# Base URL
 baseurl: ""
 
-# Kramdown settings
 kramdown:
   footnote_backlink: "&#8617;&#xfe0e;"
   syntax_highlighter: rouge
@@ -91,38 +53,23 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-# Collections
 collections:
   tabs:
     output: true
     sort_by: order
 
-# Defaults
 defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: post
-      comments: false
-      toc: true
-      permalink: /insights/:title/
-  - scope:
-      path: _drafts
-    values:
-      comments: false
   - scope:
       path: ""
       type: tabs
     values:
       layout: page
       permalink: /:title/
+      toc: false
 
-# SASS
 sass:
   style: compressed
 
-# HTML compression
 compress_html:
   clippings: all
   comments: all
@@ -132,7 +79,6 @@ compress_html:
   ignore:
     envs: [development]
 
-# Exclude from build
 exclude:
   - "*.gem"
   - "*.gemspec"
@@ -143,22 +89,5 @@ exclude:
   - purgecss.js
   - "*.config.js"
   - "package*.json"
-
-# Jekyll Archives
-jekyll-archives:
-  enabled: [categories, tags]
-  layouts:
-    category: category
-    tag: tag
-  permalinks:
-    tag: /topics/:name/
-    category: /services/:name/
-
-# Custom CSS
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Custom styling
-custom_css:
-  - /assets/css/custom.css
+  - _disabled
+  - _posts

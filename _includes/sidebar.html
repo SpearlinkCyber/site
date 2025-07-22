@@ -1,0 +1,40 @@
+<aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <header class="profile-wrapper">
+    <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
+      {% if site.avatar != empty and site.avatar %}
+        <img src="{{ site.avatar | relative_url }}" alt="avatar" onerror="this.style.display='none'">
+      {% endif %}
+    </a>
+
+    <h1 class="site-title">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    </h1>
+    
+    {% if site.tagline %}
+      <p class="site-subtitle fst-italic mb-0">{{ site.tagline }}</p>
+    {% endif %}
+  </header>
+
+  <nav class="flex-column flex-grow-1 w-100 ps-0">
+    <ul class="nav">
+      <li class="nav-item{% if page.url == '/' %} active{% endif %}">
+        <a href="{{ '/' | relative_url }}" class="nav-link">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </a>
+      </li>
+      
+      {% assign tabs = site.tabs | sort: 'order' %}
+      {% for tab in tabs %}
+        {% assign url = tab.url | remove: 'index.html' %}
+        <li class="nav-item{% if page.url == url %} active{% endif %}">
+          <a href="{{ url | relative_url }}" class="nav-link">
+            <i class="{{ tab.icon }}"></i>
+            <span>{{ tab.title }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+
+</aside>

@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<article class="px-1">
+  <div class="content">
+    {{ content }}
+  </div>
+
+  {% if page.tail_includes %}
+    {% for script in page.tail_includes %}
+      {% include {{ script }} %}
+    {% endfor %}
+  {% endif %}
+</article>

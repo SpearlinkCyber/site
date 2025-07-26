@@ -11,6 +11,16 @@ description: >
 
 url: "https://spearlinkcyber.com.au"
 
+# Author/Social Configuration (fixes footer empty anchor tags)
+social:
+  name: Spearlink Cyber
+  email: sales@spearlinkcyber.com.au
+  links:
+    - https://www.linkedin.com/company/spearlink-cyber
+
+# Footer copyright name
+author: Spearlink Cyber
+
 webmaster_verifications:
   google: qcUWvVhnFbK2olYDS9bW-7_6KVxV8gk9KZxB2MIT-50
   bing: # Add your Bing Webmaster verification code

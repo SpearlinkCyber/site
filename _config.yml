@@ -27,7 +27,7 @@ webmaster_verifications:
 
 analytics:
   google:
-    id: G-XXXXXXXXXX  # Replace with your Google Analytics ID
+    id: G-KKDT09HNP7  # Replace with your Google Analytics ID
 
 pageviews:
   provider: google

@@ -54,7 +54,7 @@ Umbrella Corporation have taken over the database infrastructure of a recently a
 4. [Setting Up Group Managed Service Accounts (gMSAs)](#4-setting-up-group-managed-service-accounts-gmsas)
 5. [Create the gMSAs for DB01 and DB02](#5-create-the-gmsas-for-db01-and-db02)
 6. [Installing SQL Server](#6-installing-sql-server)
-7. [Creating and Configuring Database Permissions and Accounts](#7-creating-and-configuring-database-permissions-and-accounts)
+7. [Creating and configuring database perms and accounts](#7-creating-and-configuring-database-perms-and-accounts)
 8. [Create Web App](#8-create-web-app)
 
 ### 1. Deploying Virtual Machines

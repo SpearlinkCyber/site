@@ -90,3 +90,5 @@ exclude:
   - "*.config.js"
   - "package*.json"
   - _disabled
+  - sitemap.xml.backup
+  - robots.txt.backup

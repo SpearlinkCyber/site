@@ -1,0 +1,63 @@
+---
+layout: default
+sitemap: false
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - Spearlink Cyber</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #1e3a8a; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 10px 0; padding: 10px; background: #f8fafc; border-radius: 5px; }
+        a { text-decoration: none; color: #1e40af; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+        .description { color: #6b7280; font-size: 14px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Site Map</h1>
+    <p>Complete overview of all pages on Spearlink Cyber website.</p>
+    
+    <ul>
+        <li>
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <div class="description">Professional cybersecurity consulting services</div>
+        </li>
+        <li>
+            <a href="{{ '/services/' | relative_url }}">Services</a>
+            <div class="description">Penetration testing, cloud security review, and security consulting</div>
+        </li>
+        <li>
+            <a href="{{ '/about/' | relative_url }}">About</a>
+            <div class="description">Background and expertise in cybersecurity</div>
+        </li>
+        <li>
+            <a href="{{ '/research/' | relative_url }}">Research</a>
+            <div class="description">Technical analysis and security insights</div>
+        </li>
+        <li>
+            <a href="{{ '/coming-soon/' | relative_url }}">Coming Soon</a>
+            <div class="description">EXPLOUT - AI-powered security testing platform</div>
+        </li>
+        <li>
+            <a href="{{ '/contact/' | relative_url }}">Contact</a>
+            <div class="description">Get in touch for cybersecurity consultation</div>
+        </li>
+    </ul>
+    
+    <h2>Recent Posts</h2>
+    <ul>
+        {% for post in site.posts limit:10 %}
+        <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <div class="description">{{ post.date | date: "%B %d, %Y" }} - {{ post.excerpt | strip_html | truncate: 100 }}</div>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

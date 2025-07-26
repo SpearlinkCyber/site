@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mx-xl-3 mt-3">
+      <article>
+        <header>
+          <h1 class="post-title">{{ page.title }}</h1>
+          <div class="post-meta">
+            <span class="text-muted">
+              {{ page.date | date: "%b %d, %Y" }}
+            </span>
+            {% if page.categories.size > 0 %}
+              <span class="text-muted">•</span>
+              {% for category in page.categories %}
+                <span class="badge badge-primary">{{ category }}</span>
+              {% endfor %}
+            {% endif %}
+          </div>
+        </header>
+        
+        <div class="post-content">
+          {{ content }}
+        </div>
+        
+        {% if page.tags.size > 0 %}
+          <div class="post-tags mt-4">
+            <strong>Tags:</strong>
+            {% for tag in page.tags %}
+              <span class="badge badge-secondary">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </article>
+    </div>
+  </div>
+</div>

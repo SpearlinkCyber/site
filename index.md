@@ -7,11 +7,9 @@ title: Home
   <img src="/assets/img/logos/spearlink-horizontal-small.png" alt="Spearlink Cyber" class="homepage-logo">
 </div>
 
-# Professional Cybersecurity Consulting
+# Precision-focused security assessments. High-impact findings. Practical outcomes.
 
-**Protecting Australian organisations through expert security assessments and strategic guidance.**
-
-Leveraging years of penetration testing and security consulting experience with major Australian enterprises including financial services, healthcare, energy, and technology sectors. Available for Northern Territory consultation with focus on practical security outcomes.
+**Verified security researcher with enterprise pentesting experience** across major Australian organizations including financial services, healthcare, energy, and technology sectors. Available for Territory consultation with focus on practical security outcomes.
 
 ---
 
@@ -39,60 +37,45 @@ Leveraging years of penetration testing and security consulting experience with 
 
 ---
 
-## Northern Territory Focus
+## Latest Security Research
 
-**Building cybersecurity capability across the Territory**
+**Real-world insights from enterprise security engagements and independent research**
 
-Drawing on experience across government, local MSPs, and enterprise clients to deliver practical security guidance tailored to Territory organisations. Through SecTalks Darwin involvement and engagement with local technology partners, committed to strengthening regional cybersecurity expertise.
-
-<div class="nt-focus">
-  <div class="nt-capability">
-    <strong>🏢 Small Business to Enterprise</strong>
-    <p>Pragmatic security solutions scaled to organisational size and maturity, from startup guidance to enterprise architecture.</p>
+<div class="research-grid">
+  <div class="research-card">
+    <h4>Enterprise EDR Evasion Techniques</h4>
+    <p>Advanced red team methodologies tested against enterprise-grade security solutions including DLL unhooking and AMSI bypass techniques.</p>
+    <a href="/articles/enterprise-edr-evasion/" class="research-link">Read Article →</a>
   </div>
   
-  <div class="nt-capability">
-    <strong>🏛️ Government & Compliance</strong>
-    <p>Government sector experience with deep understanding of ACSC requirements and Australian regulatory landscape.</p>
+  <div class="research-card">
+    <h4>Multi-Cloud Attack Vectors</h4>
+    <p>Practical demonstration of AWS and Azure privilege escalation paths using real-world misconfigurations and IAM vulnerabilities.</p>
+    <a href="/articles/" class="research-link">View All Articles →</a>
   </div>
   
-  <div class="nt-capability">
-    <strong>🌏 Remote & Regional Capability</strong>
-    <p>Territory-wide engagement capability with understanding of remote infrastructure challenges and solutions.</p>
+  <div class="research-card">
+    <h4>AWS Cross-Account Database Access</h4>
+    <p>Infrastructure security insights for enterprise multi-account cloud architectures using VPC peering and IAM configuration.</p>
+    <a href="/articles/aws-cross-account-access/" class="research-link">Read Article →</a>
   </div>
+</div>
+
+<div class="research-cta">
+  <a href="/articles/" class="cta-button secondary">View All Technical Articles</a>
 </div>
 
 ---
 
-## Why Choose This Approach?
+## Northern Territory Focus
 
-<div class="value-props">
-  <div class="value-prop">
-    <strong>🇦🇺 Territory-Focused Expertise</strong>
-    <p>NT-registered consultant with genuine commitment to Northern Territory cybersecurity and capability development.</p>
-  </div>
-  
-  <div class="value-prop">
-    <strong>🏦 Enterprise Experience</strong>
-    <p>Verified security researcher with experience across major Australian enterprises including financial services, healthcare, and energy sectors.</p>
-  </div>
-  
-  <div class="value-prop">
-    <strong>🎯 Practical Security Outcomes</strong>
-    <p>Focus on finding real vulnerabilities and providing clear remediation guidance that organisations can actually implement.</p>
-  </div>
-  
-  <div class="value-prop">
-    <strong>📚 Knowledge Sharing Commitment</strong>
-    <p>SecTalks Darwin co-organiser committed to building local expertise through community development and skills transfer.</p>
-  </div>
-</div>
+**NT-registered consultant with genuine commitment to Territory cybersecurity capability development.**
+
+SecTalks Darwin founder building local security expertise through community engagement. Government sector experience with ACSC requirements and Australian regulatory landscape. Territory-wide engagement capability with understanding of remote infrastructure challenges.
 
 ---
 
 ## Ready to Strengthen Your Security Posture?
-
-Available for Territory-wide consultation on security assessment, infrastructure design, and compliance advisory.
 
 <div class="cta-section">
   <a href="/contact/" class="cta-button">Get in Touch</a>
@@ -132,51 +115,6 @@ Available for Territory-wide consultation on security assessment, infrastructure
   font-size: 1.25rem;
 }
 
-.nt-focus {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
-  padding: 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
-  border-radius: 12px;
-  border: 2px solid #dbeafe;
-}
-
-.nt-capability {
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  border-left: 4px solid #1e3a8a;
-}
-
-.nt-capability strong {
-  color: #1e3a8a;
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-}
-
-.value-props {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.value-prop {
-  padding: 1.5rem;
-  background: #f8fafc;
-  border-radius: 8px;
-  border-left: 4px solid #1e3a8a;
-}
-
-.value-prop strong {
-  color: #1e3a8a;
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
 .cta-section {
   text-align: center;
   margin: 3rem 0;
@@ -212,17 +150,60 @@ Available for Territory-wide consultation on security assessment, infrastructure
   color: white;
 }
 
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.research-card {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #e0e7ff;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.15);
+  border-color: #3b82f6;
+}
+
+.research-card h4 {
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.research-card p {
+  color: #374151;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.research-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.research-link:hover {
+  color: #1e40af;
+}
+
+.research-cta {
+  text-align: center;
+  margin: 2rem 0 0 0;
+}
+
 @media (max-width: 768px) {
   .services-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .nt-focus {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  
-  .value-props {
     grid-template-columns: 1fr;
   }
   
@@ -230,6 +211,11 @@ Available for Territory-wide consultation on security assessment, infrastructure
     display: block;
     margin: 0.5rem auto;
     max-width: 200px;
+  }
+  
+  .research-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 </style>

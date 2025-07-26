@@ -3,7 +3,7 @@ lang: en
 timezone: Australia/Darwin
 
 title: Spearlink Cyber
-tagline: Strengthening Cybersecurity through Excellence in Practice
+tagline: Precision, Excellence, Collaboration.
 description: >
   Professional cybersecurity consultant specialising in penetration testing, cloud security review, 
   and security consulting services. Supporting Australian organisations with practical 
@@ -12,15 +12,15 @@ description: >
 url: "https://spearlinkcyber.com.au"
 
 webmaster_verifications:
-  google:
-  bing:
+  google: qcUWvVhnFbK2olYDS9bW-7_6KVxV8gk9KZxB2MIT-50
+  bing: # Add your Bing Webmaster verification code
 
 analytics:
   google:
-    id:
+    id: G-XXXXXXXXXX  # Replace with your Google Analytics ID
 
 pageviews:
-  provider:
+  provider: google
 
 theme_mode: light
 cdn:
@@ -90,4 +90,3 @@ exclude:
   - "*.config.js"
   - "package*.json"
   - _disabled
-  - _posts

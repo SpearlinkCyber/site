@@ -11,6 +11,5 @@ order: 3
 ## Contact Information
 
 **Email**: [sales@spearlinkcyber.com.au](mailto:sales@spearlinkcyber.com.au)  
-**Business Registration**: Northern Territory  
-**Engagement Scope**: Territory-wide availability  
-**Business Hours**: Monday - Friday, 9:00 AM - 5:00 PM ACST
+ 
+

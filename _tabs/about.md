@@ -19,7 +19,7 @@ order: 2
   </div>
 </div>
 
-**Verified security researcher with enterprise pentesting experience** across major Australian organizations including financial services, healthcare, energy, and technology sectors. NT-registered business focused on delivering practical security outcomes for Territory organisations.
+**Leveraging years of penetration testing and security consulting experience** with major Australian enterprises including financial services, healthcare, energy, and technology sectors. NT Proud Business focused on delivering practical security outcomes for Territory organisations.
 
 **Specialist network capability** - Access to security experts for complex multi-phase assessments and compliance programs when required.
 

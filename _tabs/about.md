@@ -12,7 +12,7 @@ order: 2
       <p class="location-pin">📍 Northern Territory</p>
       <p class="credentials">Verified Security Researcher • SecTalks Darwin Founder</p>
       <div class="professional-links">
-        <a href="https://www.linkedin.com/in/k-jagdmann-2658a771/" target="_blank">LinkedIn</a> • 
+        <a href="https://www.linkedin.com/in/kym-jagdmann-2658a771/" target="_blank">LinkedIn</a> • 
         <a href="https://bugcrowd.com/h/kymb0" target="_blank">Security Research</a>
       </div>
     </div>

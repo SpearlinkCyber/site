@@ -9,7 +9,7 @@ title: Home
 
 # Precision-focused security assessments. High-impact findings. Practical outcomes.
 
-**Verified security researcher with enterprise pentesting experience** across major Australian organizations including financial services, healthcare, energy, and technology sectors. Available for Territory consultation with focus on practical security outcomes.
+**Leveraging years of penetration testing and security consulting experience** with major Australian enterprises including financial services, healthcare, energy, and technology sectors. NT Proud Business focused on delivering practical security outcomes for Territory organisations.
 
 ---
 

@@ -67,11 +67,7 @@ title: Home
 
 ---
 
-## Northern Territory Focus
-
-**NT-registered consultant with genuine commitment to Territory cybersecurity capability development.**
-
-SecTalks Darwin founder building local security expertise through community engagement. Government sector experience with ACSC requirements and Australian regulatory landscape. Territory-wide engagement capability with understanding of remote infrastructure challenges.
+## Closing the Cybersecurity Gap in the Northern Territory
 
 ---
 

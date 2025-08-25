@@ -19,10 +19,6 @@ order: 2
   </div>
 </div>
 
-**Leveraging years of penetration testing and security consulting experience** with major Australian enterprises including financial services, healthcare, energy, and technology sectors. NT Proud Business focused on delivering practical security outcomes for Territory organisations.
-
-**Specialist network capability** - Access to security experts for complex multi-phase assessments and compliance programs when required.
-
 ---
 
 ## Experience & Expertise
@@ -32,9 +28,6 @@ order: 2
 
 ### SecTalks Darwin Founder  
 Building local cybersecurity capabilities through knowledge sharing and community development. Committed to strengthening regional security expertise.
-
-### Government & Compliance
-Experience with ACSC requirements, ISO 27001 frameworks, and Australian regulatory landscape. Territory-wide engagement capability with understanding of remote infrastructure challenges.
 
 ---
 

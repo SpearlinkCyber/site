@@ -67,6 +67,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  articles:
+    output: true
+    permalink: /articles/:name/
 
 defaults:
   - scope:
@@ -76,6 +79,12 @@ defaults:
       layout: page
       permalink: /:title/
       toc: false
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: page
+      toc: true
 
 sass:
   style: compressed

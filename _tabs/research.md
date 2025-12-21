@@ -12,6 +12,15 @@ Technical insights from security engagements.
 
 ## Featured Research
 
+### LLM Security Part 1: Architecture, What Are You Attacking
+*This is a technical two-part technical series on attacking LLM implementations.*
+
+Understanding transformers, token streams, and the three-layer defense stack before you try to break them. Part 1 covers architecture; Part 2 covers what actually bypasses modern semantic defenses.
+
+[Read Article →](/articles/llm-security-part-1/)
+
+---
+
 ### Enterprise EDR Evasion Techniques
 *Advanced red team methodologies for enterprise environments*
 

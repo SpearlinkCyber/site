@@ -6,7 +6,7 @@ order: 2
 
 <div class="about-hero">
   <div class="principal-profile">
-    <img src="/assets/img/principal-headshot.png" alt="Principal Consultant" class="principal-headshot">
+    <img src="/assets/img/principal-headshot.png" alt="Principal Consultant" class="principal-headshot" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
     <div class="principal-info">
       <h1>Professional Cybersecurity Consulting</h1>
       <p class="location-pin">📍 Northern Territory</p>

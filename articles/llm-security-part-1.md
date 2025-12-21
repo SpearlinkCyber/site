@@ -25,38 +25,28 @@ The target: enterprise LLM deployments - AI chatbots constrained to specific bus
 _For background on how prompt injection evolved as a vulnerability class, see Simon Willison's [Prompt Injection series](https://simonwillison.net/series/prompt-injection/)._
 
 
-## Section 1: WTF Is a Transformer {#transformer}
-
-### It's All Just Text Prediction {#text-prediction}
-
-### The Security Problem: No Privilege Separation {#no-privilege-separation}
-
-## How Token Streams Actually Look {#token-streams}
-
-### A Normal ChatML Conversation {#normal-chatml}
-
-### What Happens When You Inject Tags {#inject-tags}
-
-### "But Production Systems Filter Those Tokens!" {#filter-tokens}
-
-## Section 2: The Three-Layer Defense Stack {#defense-stack}
-
-### Layer 1: Cloud Security Services {#layer-1}
-
-### Layer 2: System Prompt Constraints {#layer-2}
-
-### Layer 3: Output Filtering {#layer-3}
-
 Before we explore the layers of defence, we need a primer on what actually happens when you ask the robot a question or have a conversation.
 
-Up first is Transformers
+## Table of Contents
 
-## Section 1: WTF Is a Transformer (I got Claude to teach me this btw, I'm not an authority)
+- [WTF Is a Transformer](#transformer)
+  - [It's All Just Text Prediction](#text-prediction)
+  - [The Security Problem: No Privilege Separation](#no-privilege-separation)
+- [How Token Streams Actually Look](#token-streams)
+  - [A Normal ChatML Conversation](#normal-chatml)
+  - [What Happens When You Inject Tags](#inject-tags)
+  - ["But Production Systems Filter Those Tokens!"](#filter-tokens)
+- [The Three-Layer Defense Stack](#defense-stack)
+  - [Layer 1: Cloud Security Services](#layer-1)
+  - [Layer 2: System Prompt Constraints](#layer-2)
+  - [Layer 3: Output Filtering](#layer-3)
+
+## Section 1: WTF Is a Transformer {#transformer}
 A transformer is the neural network architecture that powers modern LLMs.
 
 In other words, takes a question (input), and using tokenization, outputs, well, the answer. 
 
-### It's All Just Text Prediction
+### It's All Just Text Prediction {#text-prediction}
 
 An LLM predicts the next chunk of text given everything that came before. That's it. No reasoning, no understanding, no sentience-just probability distributions over what token comes next, shaped by obscene amounts of training data.
 
@@ -72,7 +62,7 @@ What literally happens when you ask a question:
 8. Eventually: `"There are approximately 7,500 species of apples."` + stop token)
 ```
 
-### The Security Problem: No Privilege Separation
+### The Security Problem: No Privilege Separation {#no-privilege-separation}
 
 Here's where it gets spicy.
 
@@ -96,7 +86,7 @@ If that sounds insane from a security perspective, congratulations, you have sli
 
 *For a deeper dive into tokenization, see [Hugging Face: Messages and Special Tokens](https://huggingface.co/learn/agents-course/unit1/messages-and-special-tokens)*
 
-## How Token Streams Actually Look
+## How Token Streams Actually Look {#token-streams}
 
 Chat models don't inherently understand "roles." They're not sitting there thinking "ah yes, this is the system speaking, I should obey." They're trained to recognise **special tokens** that mark message boundaries.
 
@@ -113,7 +103,7 @@ Different model families use different formats, because of course they do 🙄:
 
 Why does this matter? Because if you know what tokens a system uses, you know what to inject (although I have still had success injecting other formats, as defences sometimes filter their own tokens, not everyone else's).
 
-### A Normal ChatML Conversation
+### A Normal ChatML Conversation {#normal-chatml}
 
 What you see in the pretty UI:
 
@@ -143,7 +133,7 @@ But it learned this from *patterns*, not from some hardcoded rule. Which means..
 
 *For the canonical reference on chat templates, see [Hugging Face: Templates for Chat Models](https://huggingface.co/docs/transformers/main/en/chat_templating)*
 
-### What Happens When You Inject Tags
+### What Happens When You Inject Tags {#inject-tags}
 
 *Note: This is a simplified example to illustrate the vulnerability. Production systems filter known special tokens—this exact attack won't work against ChatGPT or Claude. But understanding the mechanism matters for what comes next.*
 
@@ -184,7 +174,8 @@ The model can't distinguish between the *real* system block (injected by the dev
 
 *For a deep dive on special token injection, see the [Special Token Injection Attack Guide](https://github.com/AAAJohnAAA/Special-Token-Injection) and [Promptfoo's STI testing framework](https://www.promptfoo.dev/blog/special-token-injection/)*
 
-### "But Production Systems Filter Those Tokens!"
+### "But Production Systems Filter Those Tokens!" {#filter-tokens}
+
 
 Yes, they do. The obvious ones.
 
@@ -204,7 +195,7 @@ But that's an attack technique. This post is about understanding the architectur
 
 **Now onto Section 2!**
 
-## Section 2: The Three-Layer Defense Stack (Semantic Architecture)
+## Section 2: The Three-Layer Defense Stack (Semantic Architecture) {#defense-stack}
 
 Layer 1 (input filtering) and Layer 3 (output filtering) are commonly known as "guardrails" - they reduce attack surface and catch known patterns, but they're not a 100% defense. Given enough time and creativity, they can be bypassed. The question isn't "are guardrails secure?" - it's "what's my detection gap?" **Think of guardrails like a WAF for LLMs.**
 
@@ -242,7 +233,7 @@ Input → Syntactic (cheap, fast, catches obvious)
 
 _The 200 OK response confirms the payload reached the LLM unfiltered. The input guardrail - the security control specifically designed to block this content - failed to detect identical semantic intent with trivial obfuscation._
 
-### Layer 1: Cloud Security Services
+### Layer 1: Cloud Security Services {#layer-1}
 
 **Azure Content Safety / Google Model Armor / AWS Bedrock Guardrails**
 
@@ -284,7 +275,7 @@ Separate from harm categories, this specifically detects prompt injection patter
 **[Further reading: Azure Content Safety documentation](https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/harm-categories)**
 
 
-### Layer 2: System Prompt Constraints
+### Layer 2: System Prompt Constraints {#layer-2}
 
 This is the developer-defined personality injected before your input:
 
@@ -336,7 +327,7 @@ Even if you successfully inject instructions the model follows, you're constrain
 - Output filtering (Layer 3) that catches malicious responses
 - The fundamental limitation that without execution layers, the LLM only generates text
 
-### Layer 3: Output Filtering
+### Layer 3: Output Filtering {#layer-3}
 
 Same services as Layer 1, but applied to what the model *generated* rather than what you *sent*.
 

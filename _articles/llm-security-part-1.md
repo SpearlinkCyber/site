@@ -5,7 +5,8 @@ description: "LLM security is receiving increased attention due to both integrat
 ---
 
 
-LLM security is receiving increased attention due to both integration cadence and severity of compromise [when things go wrong](https://www.businessinsider.com/chevrolet-dealer-chatbot-tricked-selling-car-one-dollar-2023-12). I decided to put together a two part series that covers what a modern security stack looks like and some attack techniques that have worked for me in the wild, as I've been testing a number of enterprise-integrated LLMs recently, with some enlightening findings:
+LLM security is receiving increased attention due to both integration cadence and severity of compromise [when things go wrong](https://www.businessinsider.com/chevrolet-dealer-chatbot-tricked-selling-car-one-dollar-2023-12).  
+In light of this, I decided to put together a two part series that covers what a modern security stack looks like and some attack techniques that have worked for me in the wild, as I've been testing a number of enterprise-integrated LLMs recently, with some enlightening findings:
 
 ![bc_findings_redacted]({{ '/assets/img/posts/llm/bc_findings_redacted.png' | relative_url }})
 

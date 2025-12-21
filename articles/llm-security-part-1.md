@@ -5,7 +5,7 @@ description: "LLM security is receiving increased attention due to both integrat
 ---
 
 
-LLM security is receiving increased attention due to both integration cadence and severity of compromise when [when things go wrong](https://www.businessinsider.com/chevrolet-dealer-chatbot-tricked-selling-car-one-dollar-2023-12). I decided to put together a two part series that covers what a modern security stack looks like and some attack techniques that have worked for me in the wild, as I've been testing a number of enterprise-integrated LLMs recently, with some enlightening findings:
+LLM security is receiving increased attention due to both integration cadence and severity of compromise [when things go wrong](https://www.businessinsider.com/chevrolet-dealer-chatbot-tricked-selling-car-one-dollar-2023-12). I decided to put together a two part series that covers what a modern security stack looks like and some attack techniques that have worked for me in the wild, as I've been testing a number of enterprise-integrated LLMs recently, with some enlightening findings:
 
 ![bc_findings_redacted]({{ '/assets/img/posts/llm/bc_findings_redacted.png' | relative_url }})
 
@@ -25,19 +25,27 @@ The target: enterprise LLM deployments - AI chatbots constrained to specific bus
 _For background on how prompt injection evolved as a vulnerability class, see Simon Willison's [Prompt Injection series](https://simonwillison.net/series/prompt-injection/)._
 
 
-## Table of Contents
+## Section 1: WTF Is a Transformer {#transformer}
 
-- [Section 1: WTF Is a Transformer](#wtf-is-a-transformer-i-got-claude-to-teach-me-this-btw-im-not-an-authority)
-  - [It's All Just Text Prediction](#its-all-just-text-prediction)
-  - [The Security Problem: No Privilege Separation](#the-security-problem-no-privilege-separation)
-- [How Token Streams Actually Look](#how-token-streams-actually-look)
-  - [A Normal ChatML Conversation](#a-normal-chatml-conversation)
-  - [What Happens When You Inject Tags](#what-happens-when-you-inject-tags)
-  - ["But Production Systems Filter Those Tokens!"](#but-production-systems-filter-those-tokens)
-- [Section 2: The Three-Layer Defense Stack (Semantic Architecture)](#section-2-the-three-layer-defense-stack-semantic-architecture)
-  - [Layer 1: Cloud Security Services](#layer-1-cloud-security-services)
-  - [Layer 2: System Prompt Constraints](#layer-2-system-prompt-constraints)
-  - [Layer 3: Output Filtering](#layer-3-output-filtering)
+### It's All Just Text Prediction {#text-prediction}
+
+### The Security Problem: No Privilege Separation {#no-privilege-separation}
+
+## How Token Streams Actually Look {#token-streams}
+
+### A Normal ChatML Conversation {#normal-chatml}
+
+### What Happens When You Inject Tags {#inject-tags}
+
+### "But Production Systems Filter Those Tokens!" {#filter-tokens}
+
+## Section 2: The Three-Layer Defense Stack {#defense-stack}
+
+### Layer 1: Cloud Security Services {#layer-1}
+
+### Layer 2: System Prompt Constraints {#layer-2}
+
+### Layer 3: Output Filtering {#layer-3}
 
 Before we explore the layers of defence, we need a primer on what actually happens when you ask the robot a question or have a conversation.
 
@@ -84,7 +92,7 @@ The model *infers* which parts are "instructions" vs "data" based on position an
 
 If that sounds insane from a security perspective, congratulations, you have slightly more braincells than I do.
 
-![bc_findings_redacted]({{ '/assets/img/posts/llm/neuron_activation.jpeg' | relative_url }})
+![literally_me]({{ '/assets/img/posts/llm/neuron_activation.jpeg' | relative_url }})
 
 *For a deeper dive into tokenization, see [Hugging Face: Messages and Special Tokens](https://huggingface.co/learn/agents-course/unit1/messages-and-special-tokens)*
 
@@ -229,8 +237,8 @@ Input → Syntactic (cheap, fast, catches obvious)
 ```
 
 
-![bc_findings_redacted]({{ '/assets/img/posts/llm/bad_req_403.png' | relative_url }})
-![bc_findings_redacted]({{ '/assets/img/posts/llm/bad_req_403.png' | relative_url }})
+![403]({{ '/assets/img/posts/llm/bad_req_403.png' | relative_url }})
+![200]({{ '/assets/img/posts/llm/bad_req_200.png' | relative_url }})
 
 _The 200 OK response confirms the payload reached the LLM unfiltered. The input guardrail - the security control specifically designed to block this content - failed to detect identical semantic intent with trivial obfuscation._
 

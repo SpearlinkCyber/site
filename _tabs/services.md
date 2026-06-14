@@ -16,6 +16,23 @@ Penetration testing focused on real-world attack scenarios and business impact. 
 
 ---
 
+## AI/LLM Application Security
+
+Security assessment of AI-integrated applications, including large language model deployments, retrieval-augmented generation (RAG) systems, conversational AI, and agentic workflows. Testing addresses both the AI components and the surrounding application architecture, since most real risk lives at the boundary between the two.
+
+
+**Key Areas:**
+- Prompt injection, jailbreaking, and instruction hierarchy bypass
+- RAG pipeline security including data leakage, retrieval manipulation, and source poisoning
+- AI agent and tool-use security including unauthorised action chains
+- LLM API authentication, authorisation, and quota enforcement
+- Sensitive data exposure through model responses and embeddings
+- AI governance alignment (ISO 42001, ACSC AI guidance, voluntary AI Safety Standard)
+
+Our own testing is AI-augmented as well. See [AI Capability](/ai-capability/) for how we use it on engagements.
+
+---
+
 ## Cloud Security Review
 
 Security configuration assessment across AWS, Azure, and GCP environments. Focus on misconfigurations, access control weaknesses, and compliance gaps.
